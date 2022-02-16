@@ -1,0 +1,46 @@
+<h1>This is registration page..</h1>
+<hr/>
+<form method="POST">
+    {% csrf_token %}
+<table border="1">
+    <tr>
+        <td>User Name</td>
+        <td><input type="text" placeholder="Enter Username" required> </td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td><input type="Email" placeholder="Enter Email" required> </td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td><input type="Password" placeholder="Enter Password" required> </td>
+    </tr>
+    <tr>
+        <td>Age</td>
+        <td><input type="text" placeholder="Enter Age"> </td>
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td><input type="radio" value="M" name="Gender"> Male
+            <input type="radio" value="F" name="Gender"> Female</td>
+    </tr>
+    <tr>
+        <td>Marital Status</td>
+        <td><select name="MaritalStatus">
+            <option value="Married">Married</option>
+            <option value="Unmarried">Unmarried</option>
+        </select></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button type="submit">registration</button></td>
+    </tr>
+</table>
+{% if messages %}
+{% for msg in messages %}
+<b>{{msg}}</b>
+{% endfor %}
+{% endif %}
+<hr/>
+<em> if you All ready registered member <a href="">Sign In </a> </em>
+</form>
